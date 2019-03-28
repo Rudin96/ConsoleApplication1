@@ -3,23 +3,52 @@
 
 #include "pch.h"
 #include <iostream>
+#include <string>
+#include <cstdlib>
+#include <stdlib.h>
+#include <time.h>
 
 using namespace std;
 
 int main()
 {
+	string Name = "";
+	string Name2 = "";
+	int iSecret;
+	int	iGuess;
 
-    cout << "Hello World!\n"; 
+	srand(time(NULL));
 
+	iSecret = rand() % 9 + 1;
+
+	do {
+		cout << "Gissa det hemliga talet" << endl;
+		cin >> iGuess;
+
+		
+
+		if (iSecret < iGuess) {
+
+			cout << "Talet är ¨mindre" << endl;
+			//cin >> iGuess;
+
+		}
+		else if (iSecret > iGuess) {
+
+			cout << "Talet är större" << endl;
+			//cin >> iGuess;
+		}
+		else if (iSecret == iGuess) {
+
+			cout << "Du gissade rätt, det hemliga talet var: " << iSecret << endl;
+
+		}
+	} while (iGuess != iSecret);
+	//cin >> Name;
+	//cout << "Hej, "<<Name << endl;
+	//cout << "Ange Temperatur:";
+	//cin >> age;
+	//cout <<"Idag är det "<<age<<" grader." << endl;
+	//cin >> age;
+	//cout << "Jag är " << age << "år gammal";
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
