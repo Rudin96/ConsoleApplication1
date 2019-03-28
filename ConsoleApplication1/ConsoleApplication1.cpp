@@ -12,43 +12,10 @@ using namespace std;
 
 int main()
 {
-	string Name = "";
-	string Name2 = "";
-	int iSecret;
-	int	iGuess;
+	int ANumber;
 
-	srand(time(NULL));
+	cout << "Skriv ett tal" << endl;
+	cin >> ANumber;
 
-	iSecret = rand() % 9 + 1;
-
-	do {
-		cout << "Gissa det hemliga talet" << endl;
-		cin >> iGuess;
-
-		
-
-		if (iSecret < iGuess) {
-
-			cout << "Talet är ¨mindre" << endl;
-			//cin >> iGuess;
-
-		}
-		else if (iSecret > iGuess) {
-
-			cout << "Talet är större" << endl;
-			//cin >> iGuess;
-		}
-		else if (iSecret == iGuess) {
-
-			cout << "Du gissade rätt, det hemliga talet var: " << iSecret << endl;
-
-		}
-	} while (iGuess != iSecret);
-	//cin >> Name;
-	//cout << "Hej, "<<Name << endl;
-	//cout << "Ange Temperatur:";
-	//cin >> age;
-	//cout <<"Idag är det "<<age<<" grader." << endl;
-	//cin >> age;
-	//cout << "Jag är " << age << "år gammal";
+	cout << (ANumber < 0 ? "Talet är negativt" : "Talet är Positivt") << endl;
 }
