@@ -9,7 +9,34 @@ using namespace std;
 int main()
 {
 
-    cout << "Hello World!\n"; 
+	using namespace std;
+
+	int main()
+	{
+		int TempIdag;
+		int TempImorrn;
+
+		cout << "Ange Dagens Temperatur" << endl;
+		cin >> TempIdag;
+		cout << "Ange morgondagens temperatur" << endl;
+		cin >> TempImorrn;
+
+		if (TempIdag > TempImorrn) {
+
+			cout << "Temperaturen idag är högre än temperaturen imorgon" << endl;
+
+		}
+		else if (TempIdag < TempImorrn) {
+
+			cout << "Temperaturen idag är lägre än temperaturen imorgon" << endl;
+
+		}
+		else if (TempIdag == TempImorrn) {
+
+			cout << "Temperaturen idag är likadan som temperaturen imorgon!" << endl;
+
+		}
+	}
 
 }
 
